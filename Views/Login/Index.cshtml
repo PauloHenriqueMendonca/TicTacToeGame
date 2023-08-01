@@ -9,7 +9,7 @@
     <input type="text" name="Usuario" placeholder="Digite seu usuario" id="ilogin" />
     <input type="text" name="Senha" placeholder="Digite sua senha" id="isenha" />
     <button type="submit" id="entrar">Entrar</button>
-    <button type="button" onclick="forgotPassword()">Forgot Password</button>
+    <a href="@Url.Action("ForgotPassword")" class="btn btn-default">Forgot Password</a>
     <a href="@Url.Action("Cadastro")" class="btn btn-default">Cadastrar</a>
 
     @if (ViewBag.ErrorMessage != null)
