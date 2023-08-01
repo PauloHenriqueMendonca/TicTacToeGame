@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" lang="pt-br"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<svg xmlns =" http:www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="deleteIcon" viewBox="0 0 24 24">
+            <path stroke-width="0" fill="none" d="M0 0h24v24H0z" />
+            <path stroke-width="0" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+        </symbol>
+
+        <symbol id="playIcon" viewBox="0 0 24 24">
+            <path stroke-width="0" fill="none" d="M0 0h24v24H0z" />
+            <path stroke-width="0" d="M8 5v14l11-7z" />
+        </symbol>
+
+    </defs>
+</svg>
+
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Tic Tac Toe", "Index", "Home", new { area = "", userId = Request.QueryString["userId"] }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { userId = Request.QueryString["userId"] }, new { })</li>
+                    <li><a href="@Url.Action("Historico", new { userID = Request.QueryString["userId"] })">Historico</a></li>
+                    <li><a href="@Url.Action("Game", new { userID = Request.QueryString["userId"] })">New Game</a></li>
+                    <li><a href="@Url.Action("Index","Login", new { userID = Request.QueryString["userId"] })" >Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/TTT")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@using TicTacToeGame.Models
+@model IEnumerable<Game>
+@{
+    ViewBag.Title = "Historico";
+}
+
+<h3>Historico de jogos</h3>
+<table id="historicoTabela">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>GameId</th>
+            <th>UserId</th>
+            <th>Winner</th>
+            <th>Moves</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+        @foreach(var game in Model)
+        {
+            <tr>
+                <td>@game.Date</td>
+                <td>@game.GameId</td>
+                <td>@game.UserId</td>
+                <td>@game.Winner</td>
+                <td>@game.QuantMoves</td>
+                <td>
+                    <button id="Game@(game.GameId)" title="Delete Game?" data-gameId="@game.GameId" class="deleteGame button30">
+                        <svg class="svgIcon svgBlue svg24"><use xlink:href="#deleteIcon"></use></svg>
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

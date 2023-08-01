@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Login Page";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+
+<form action="/login/logar" method="post">
+    <h3>Login</h3>
+    <input type="text" name="Usuario" placeholder="Digite seu usuario" id="ilogin" />
+    <input type="text" name="Senha" placeholder="Digite sua senha" id="isenha" />
+    <button type="submit" id="entrar">Entrar</button>
+    <button type="button" onclick="forgotPassword()">Forgot Password</button>
+    <a href="@Url.Action("Cadastro")" class="btn btn-default">Cadastrar</a>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <h3>@ViewBag.ErrorMessage</h3>
+    }
+
+</form>
+
+
+
