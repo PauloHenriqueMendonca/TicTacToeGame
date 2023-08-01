@@ -123,19 +123,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\JsonSerializerOptions.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Cadastro.cs" />
     <Compile Include="Models\Game.cs" />
-    <Compile Include="Models\GameResult.cs" />
-    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\WinInformation.cs" />
-    <Compile Include="Models\WinType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

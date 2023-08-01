@@ -39,7 +39,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { userId = Request.QueryString["userId"] }, new { })</li>
                     <li><a href="@Url.Action("Historico", new { userID = Request.QueryString["userId"] })">Historico</a></li>
                     <li><a href="@Url.Action("Game", new { userID = Request.QueryString["userId"] })">New Game</a></li>
-                    <li><a href="@Url.Action("Index","Login", new { userID = Request.QueryString["userId"] })" >Logout</a></li>
+                    <li><a href="@Url.Action("Index","Login")" >Logout</a></li>
                 </ul>
             </div>
         </div>
