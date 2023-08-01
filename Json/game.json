@@ -54,26 +54,5 @@
     "UserId": 4,
     "Winner": "X",
     "QuantMoves": 9
-  },
-  {
-    "Date": "2023-08-01T13:56:17.843-03:00",
-    "GameId": 12,
-    "UserId": 4,
-    "Winner": "X",
-    "QuantMoves": 5
-  },
-  {
-    "Date": "2023-08-01T13:56:21.563-03:00",
-    "GameId": 13,
-    "UserId": 4,
-    "Winner": "X",
-    "QuantMoves": 5
-  },
-  {
-    "Date": "2023-08-01T13:56:25.379-03:00",
-    "GameId": 14,
-    "UserId": 4,
-    "Winner": "X",
-    "QuantMoves": 7
   }
 ]
